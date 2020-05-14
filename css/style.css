@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tammudu+2|Poppins|display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Raleway:ital,wght@0,100;1,100&display=swap');
+
+:root {
+    --color_font_primary: #ebebeb;
+    --color_font_second: #3370e2;
+    --background_color_primary: #1D1D1D;
+    --backgrund_color_second: #2a2b2e;
+    --background_logo: linear-gradient(to right, #3370e2, #3370e2);
+}
+
 body{
     margin: 0;
 }
@@ -10,7 +21,7 @@ canvas{
 #controls{
     width: 20%;
     height: 100vh;
-    background-color: rgb(140, 140, 143);
+    background: var(--background_color_primary);
     position: relative;
     float: left;
 }
@@ -22,3 +33,34 @@ canvas{
     position: relative;
     float: right;
 }
+
+#btn_loadOBJ{
+    border: 0;
+    font-size: 1.4rem;
+    margin: 50px;
+    background-color: transparent;
+    padding: 10px;
+    font-family: 'Poppins', serif;
+    color: var(--color_font_primary);
+    border: 2px solid var(--color_font_second);
+    border-radius: 5px;
+    box-shadow: 10px 10px 36px #0f0f0f, -10px -10px 36px #2c2c2c;
+    padding: 10px 20px;
+
+}
+
+#btn_loadOBJ:hover{
+    background-color: var(--color_font_second);
+}
+
+/* .btn_Logins button:nth-child(1) {
+    
+} */
+
+/* .btn_Logins button:nth-child(2) {
+    color: var(--color_font_primary);
+    border: 2px solid var(--color_font_second);
+    border-radius: 5px;
+    box-shadow: 10px 10px 36px #0f0f0f, -10px -10px 36px #2c2c2c;
+    padding: 10px 20px;
+} */

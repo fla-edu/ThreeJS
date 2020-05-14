@@ -5,17 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThreeJS</title>
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-
-        
-
-    </style>
-
 </head>
 <body>
 
     <div id="controls">
-        <p>Hello Controls</p>
+        <input type="file" name="input_OBJ" id="input_OBJ" accept=".obj" style="display: none">
+        <input type="button" id="btn_loadOBJ" value="Carregar"></input>
     </div>
     <div id="canvas">
     </div>
@@ -23,6 +18,9 @@
 </body>
 
 <script src="./assets/three.js-master/build/three.min.js"></script>
+
+<script src="./assets/three.js-master/examples/js/loaders/OBJLoader.js"></script>
+
 <script src="./assets/three.js-master/examples/js/controls/OrbitControls.js"></script>
 <script src="./js/index.js"></script>
 

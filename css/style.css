@@ -1,6 +1,8 @@
+/* Fontes utilizadas no projeto  ==========================*/
 @import url('https://fonts.googleapis.com/css?family=Baloo+Tammudu+2|Poppins|display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Raleway:ital,wght@0,100;1,100&display=swap');
 
+/* Variáveis padrões do projeto */
 :root {
     --color_font_primary: #ebebeb;
     --color_font_second: #3370e2;
@@ -9,8 +11,11 @@
     --background_logo: linear-gradient(to right, #3370e2, #3370e2);
 }
 
+/* Construção do Body e das Divs principais ===============*/
 body{
     margin: 0;
+    color: var(--color_font_primary);
+    font-family: 'Poppins', serif;
 }
 
 canvas{
@@ -26,41 +31,119 @@ canvas{
     float: left;
 }
 
+
 #canvas{
     width: 80%;
     height: 100vh;
-    background-color: aqua;
     position: relative;
     float: right;
 }
 
-#btn_loadOBJ{
-    border: 0;
-    font-size: 1.4rem;
-    margin: 50px;
+/* Botão para carregar um objeto ==========================*/
+.button {
+    display: block;
+    margin: 10px auto;
+    font-size: 1rem;
     background-color: transparent;
-    padding: 10px;
     font-family: 'Poppins', serif;
     color: var(--color_font_primary);
     border: 2px solid var(--color_font_second);
     border-radius: 5px;
     box-shadow: 10px 10px 36px #0f0f0f, -10px -10px 36px #2c2c2c;
     padding: 10px 20px;
-
 }
 
-#btn_loadOBJ:hover{
+.button:hover{
     background-color: var(--color_font_second);
 }
 
-/* .btn_Logins button:nth-child(1) {
-    
-} */
+/* Checkbox Light =========================================*/
 
-/* .btn_Logins button:nth-child(2) {
-    color: var(--color_font_primary);
-    border: 2px solid var(--color_font_second);
+.div_light{
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    top: -5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider{
+    background-color: var(--color_font_second);
+}
+
+input:checked + .slider:before{
+    transform: translateX(30px);
+}
+
+.slider.round{
+    border-radius: 34px;
+}
+
+.slider.round:before{
+    border-radius: 50%;
+}
+
+#lbl_light{
+    margin-left: 10px;
+}
+
+/* Range Sliders XYZ =========================================*/
+
+.div_slider{
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.slider_range{
+    -webkit-appearance: none;
+    height: 5px;
     border-radius: 5px;
-    box-shadow: 10px 10px 36px #0f0f0f, -10px -10px 36px #2c2c2c;
-    padding: 10px 20px;
-} */
+    background: #d3d3d3;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider_range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color_font_second);
+}
+

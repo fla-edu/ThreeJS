@@ -10,7 +10,29 @@
 
     <div id="controls">
         <input type="file" name="input_OBJ" id="input_OBJ" accept=".obj" style="display: none">
-        <input type="button" id="btn_loadOBJ" value="Carregar"></input>
+        <input type="button" id="btn_loadOBJ" value="Carregar Objeto"></input>
+        <div class="div_light">
+            <label class="switch" for="chk_light">
+                <input type="checkbox" id="chk_light">
+                <span class="slider round"></span>
+            </label>
+            <label id="lbl_light">Directional Light</label>
+        </div>
+        <div class="div_slider">
+            <label>X </label>
+            <input type="range" min="0" max="10" value="0" id="slide_x" class="slider_range">
+            <label for="slide_x_value" id="slide_x_value">0</label>
+        </div>
+        <div class="div_slider">
+            <label>Y </label>
+            <input type="range" min="0" max="10" value="0" id="slide_y" class="slider_range">
+            <label for="slide_y_value" id="slide_y_value">0</label>
+        </div>
+        <div class="div_slider">
+            <label>Z </label>
+            <input type="range" min="0" max="10" value="0" id="slide_z" class="slider_range">
+            <label for="slide_z_value" id="slide_z_value">0</label>
+        </div>
     </div>
     <div id="canvas">
     </div>
@@ -22,6 +44,7 @@
 <script src="./assets/three.js-master/examples/js/loaders/OBJLoader.js"></script>
 
 <script src="./assets/three.js-master/examples/js/controls/OrbitControls.js"></script>
+<script src="./assets/three.js-master/examples/js/controls/PointerLockControls.js"></script>
 <script src="./js/index.js"></script>
 
 </html>
